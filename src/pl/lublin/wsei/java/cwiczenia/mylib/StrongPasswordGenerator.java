@@ -62,10 +62,47 @@ public class StrongPasswordGenerator {
             }
             if (this.znakiSpecjalne) {
                 result += this.dozwoloneZnakiSpecjalne.charAt(ran.nextInt(this.dozwoloneZnakiSpecjalne.length()));
-                this.a = this.s = this.d = true;
                 continue;
             }
+            this.a = this.s = this.d = true;
+            --i;
         }
         return shuffle(result);
+    }
+    public void setDozwoloneZnakiSpecjalne(String dozwoloneZnakiSpecjalne){
+        this.dozwoloneZnakiSpecjalne = dozwoloneZnakiSpecjalne;
+    }
+    public void setDlugosc(int dlugosc){
+        this.dlugosc = dlugosc;
+    }
+    public void setMaleLitery(boolean maleLitery){
+        this.maleLitery = maleLitery;
+    }
+    public void setWielkieLitery(boolean wielkieLitery){
+        this.wielkieLitery = wielkieLitery;
+    }
+    public void setCyfry(boolean cyfry){
+        this.cyfry = cyfry;
+    }
+    public void setZnakiSpecjalne(boolean znakiSpecjalne){
+        this.znakiSpecjalne = znakiSpecjalne;
+    }
+    public String getDozwoloneZnakiSpecjalne(){
+        return dozwoloneZnakiSpecjalne;
+    }
+    public Boolean getMaleLitery(){
+        return maleLitery;
+    }
+    public Integer getDlugosc(){
+        return dlugosc;
+    }
+    public Boolean getwielkieLitery(){
+        return wielkieLitery;
+    }
+    public Boolean getCyfry(){
+        return cyfry;
+    }
+    public Boolean getZnakiSpecjalne(){
+        return znakiSpecjalne;
     }
 }
