@@ -19,12 +19,12 @@ public class Infografika {
         if (m.find()) tytul = m.group(1);
         else tytul ="";
 
-        pat = Pattern.compile("<link>(.*)/link");
+        pat = Pattern.compile("<link>(.*)</link");
         m = pat.matcher(tekst);
         if (m.find()) adresStrony = m.group(1);
         else adresStrony ="";
 
-        pat = Pattern.compile("media:content url=\\\"(.*)\\\"");
+        pat = Pattern.compile("media:content url=\\\"(.*)\\\" type");
         m = pat.matcher(tekst);
         if (m.find()) adresGrafiki = m.group(1);
         else adresGrafiki ="";
