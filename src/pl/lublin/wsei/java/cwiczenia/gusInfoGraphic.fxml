@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lublin.wsei.java.cwiczenia.Controller" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lublin.wsei.java.cwiczenia.Controller">
+   <children>
+      <Button layoutX="26.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnOpenFileAction" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: black;" text="Otwórz plik" textFill="#fffefe" />
+      <Label fx:id="lbFile" layoutX="178.0" layoutY="47.0" prefHeight="25.0" prefWidth="491.0" style="-fx-font-style: italic;" text="Proszę wczytać plik ..." />
+      <ListView fx:id="lstInfografiki" layoutX="26.0" layoutY="110.0" prefHeight="393.0" prefWidth="393.0" />
+      <ImageView fx:id="imgMiniaturka" fitHeight="278.0" fitWidth="313.0" layoutX="461.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="469.0" layoutY="138.0" text="Miniaturka" />
+      <TextField fx:id="txtAdresStrony" editable="false" layoutX="26.0" layoutY="539.0" prefHeight="32.0" prefWidth="571.0" />
+      <Button fx:id="btnPokazInfografike" layoutX="706.0" layoutY="462.0" mnemonicParsing="false" onAction="#btnPokazOnAction" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: orange;" text="Pokaż" />
+      <Button fx:id="btnPrzejdzDoStrony" layoutX="617.0" layoutY="543.0" mnemonicParsing="false" onAction="#btnZaladujStrone" style="-fx-background-color: darkred;" text="Załaduj" textFill="WHITE" />
+      <Label layoutX="26.0" layoutY="516.0" text="Adres strony" />
+   </children>
+</AnchorPane>
